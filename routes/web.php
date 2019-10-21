@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('assessments', 'AssessmentController')->middleware('auth');
+Route::resource('questions', 'QuestionController')->middleware('auth');
+Route::resource('candidates', 'CandidateController')->middleware('auth');
+Route::resource('answers', 'AnswerController');
