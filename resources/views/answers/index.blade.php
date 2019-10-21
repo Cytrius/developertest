@@ -61,7 +61,7 @@
         document.querySelectorAll('.editor').forEach(function(textarea) {
             var editor = ace.edit(textarea);
             editor.id = textarea.name;
-            editor.session.setMode("ace/mode/{{ $candidate->assessment-language }}");
+            editor.session.setMode("ace/mode/{{ $candidate->assessment->language }}");
             editor.setOption("maxLines", 100);
             editors.push(editor);
         });
