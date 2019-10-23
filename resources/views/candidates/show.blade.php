@@ -11,10 +11,12 @@
                 </div>
 
                 <div class="card-body">
+                    <p><strong>Name:</strong> {{$candidate->name}}</p>
                     <p><strong>Email:</strong> {{$candidate->email}}</p>
                     <p><strong>Assessment:</strong> {{$candidate->assessment->name}}</p>
                     <p><strong>Link:</strong> <a href="{{ Request::root() }}/answers?token={{$candidate->token}}">{{ Request::root() }}/answers?token={{$candidate->token}}</a></p>
                     <strong>Created At:</strong> {{$candidate->created_at}}
+                    <strong>Submitted At:</strong> {{$candidate->submitted_at}}
                 </div>
             </div>
         </div>

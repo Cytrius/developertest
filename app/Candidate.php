@@ -12,10 +12,25 @@ class Candidate extends Model
     use SoftDeletes;
     
     protected $fillable = [
+        'name',
         'email',
         'assessment_id',
         'token'
     ];
+
+    protected $appends = [
+        'submitted_at'
+    ];
+
+    public function getSubmittedAtAttribute() {
+        $answer = $this->answers->first();
+
+        if (!$answer) {
+            return null;
+        }
+
+        return $answer->created_at;
+    }
 
     public function assessment() {
         return $this->belongsTo(Assessment::class);

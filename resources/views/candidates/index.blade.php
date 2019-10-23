@@ -14,15 +14,19 @@
 
                     <table class="table table-striped">
                         <thead>
+                            <th>Name</th>
                             <th>Email</th>
                             <th>Assessment</th>
+                            <th>Submitted At</th>
                             <th>Created At</th>
                         </thead>
                         <tbody>
                             @foreach ($candidates as $candidate)
                             <tr>
-                                <td><a href="/candidates/{{$candidate->id}}">{{$candidate->email}}</a></td>
-                                <td>{{$candidate->assessment->name}}</td>
+                                <td>{{$candidate->name}}</td>
+                                <td>{{$candidate->email}}</a></td>
+                                <td><a href="/candidates/{{$candidate->id}}">{{$candidate->assessment->name}}</a></td>
+                                <td>{{$candidate->submitted_at}}</td>
                                 <td>{{$candidate->created_at}}</td>
                             </tr>
                             @endforeach

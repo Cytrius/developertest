@@ -15,6 +15,11 @@
                         @csrf
                         @method('POST')
                         <div class="form-group">
+                            <label>Name</label>
+                            <input required type="text" class="form-control" id="name" name="name">
+                        </div>
+
+                        <div class="form-group">
                             <label>Email</label>
                             <input required type="email" class="form-control" id="email" name="email">
                         </div>
