@@ -66,7 +66,7 @@ class CandidateController extends Controller
      */
     public function edit(Candidate $candidate)
     {
-        //
+        return view('candidates/edit', ['assessments' => Assessment::all(), 'candidate' => $candidate]);
     }
 
     /**
@@ -78,7 +78,9 @@ class CandidateController extends Controller
      */
     public function update(Request $request, Candidate $candidate)
     {
-        //
+        $candidate->update($request->all());
+
+        return redirect('/candidates/'.$candidate->id);
     }
 
     /**

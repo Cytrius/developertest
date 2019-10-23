@@ -6,6 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
+                    <a style="float:right; padding-left:1em;" href="/candidates/{{$candidate->id}}/edit" class="card-link">Edit</a>
                     <a style="float:right" href="#" onclick="if (confirm('Delete candidate?')) document.getElementById('delete').submit()" class="card-link">Delete</a>
                     Candidate
                 </div>
