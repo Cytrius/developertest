@@ -11,7 +11,7 @@
         "zip": "zip ../release.zip -r * .[^.]* -x \"vendor/*\" -x \"node_modules/*\" -x \".env\" -x \".git/*\""
     },
     "devDependencies": {
-        "axios": "^0.19",
+        "axios": "^0.21",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
